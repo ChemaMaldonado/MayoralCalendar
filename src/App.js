@@ -1,17 +1,8 @@
 import './scss/main.scss';
-import Header from './components/Header';
-import Calendar from './components/Calendar';
-import { CalendarProvider } from './contexts/Calendar';
+import Home from './pages/Home';
 
 function App() {
-  return (
-    <div className='main-container'>
-      <CalendarProvider>
-        <Header />
-        <Calendar />
-      </CalendarProvider>
-    </div>
-  );
+  return (<Home/>);
 }
 
 export default App;

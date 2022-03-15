@@ -2,6 +2,7 @@
   margin-top: 50px;
   height: 600px;
   width: 75vw;
+  max-width: 1550px;
   background-color: aliceblue;
   border: 2px;
   border-radius: 10px;
@@ -19,6 +20,14 @@
   align-items: center;
 }
 
+.calendar-header {
+  max-width: 100%; 
+  display: flex;
+  align-items: center;
+  position: sticky;  
+  top: 0; 
+  background-color: aliceblue;
+}
 .calendar-header-content {
   min-width: 26%; 
   display: flex;
@@ -26,16 +35,40 @@
   align-items: center;
 }
 
-.calendar-header {
-  width: 100%; 
-  display: flex;
-  align-items: center;
-  position: sticky;  
-  top: 0; 
-  background-color: aliceblue;
+.calendar-header-days {
+  display: flex;  
+  margin-left: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+.calendar-header-days-content {
+  height: 15px; 
+  min-width: 25px; 
+  margin-left: 10px; 
+  font-family: 'Cascadia code';
+}
+
+.calendar-employees-content {
+  min-width: 100%; 
+  display: flex; 
+  align-items: center; 
+  padding-left: 15px;
+}
+
+.calendar-holidays-content {
+  display: flex; 
+  align-items: flex-end; 
+  margin-left: 50px; 
+  width: 75%; 
+  min-width: 75%;
+}
+
+.calendar-holidays-button {
+  height: 20px;
+  min-width: 25px;
+  margin-left: 10px; 
+}
+
+@media only screen and (max-width: 800px) {
   .calendar-content {
     min-width: 75%; 
   }
