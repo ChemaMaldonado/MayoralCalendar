@@ -68,6 +68,16 @@
   margin-left: 10px; 
 }
 
+.footer {
+  margin-top: 20px;
+}
+
+.footer-button {
+  padding: 10px;
+  font-family: 'Cascadia code';
+  background-color: aliceblue;
+}
+
 @media only screen and (max-width: 800px) {
   .calendar-content {
     min-width: 75%; 

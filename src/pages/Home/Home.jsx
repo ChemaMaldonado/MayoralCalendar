@@ -4,6 +4,7 @@ import Calendar from './components/Calendar';
 import { CalendarProvider } from '../../services/contexts/Calendar';
 import '../../scss/calendar.scss';
 import '../../scss/employee.scss';
+import Footer from '../../components/Footer';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <CalendarProvider>
         <Header />
         <Calendar />
+        <Footer />
       </CalendarProvider>
     </div>
   )

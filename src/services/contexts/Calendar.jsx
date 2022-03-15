@@ -42,13 +42,12 @@ const CalendarReducer = (state, action) => {
       };
     }
 
-    case 'loadDefaultFromStorage': {
-      const initialVacances = loadFromLocal('vacances');
-      const initialHolidays = loadFromLocal('holidays');
+    case 'loadDefault': {
+      const dataExists = localStorage.getItem('vacances') && localStorage.getItem('holidays');
       return {
         ...state,
-        vacances: initialVacances,
-        holidays: initialHolidays,
+        vacances: dataExists ? loadFromLocal('vacances') : [],
+        holidays: dataExists ? loadFromLocal('holidays') : [],
       }
     }
     
@@ -66,8 +65,7 @@ const CalendarProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    const dataExists = localStorage.getItem('vacances') && localStorage.getItem('holidays');
-    if (dataExists) dispatch({ type: 'loadDefaultFromStorage' })
+    dispatch({ type: 'loadDefault' })
   }, []);
 
   return (
