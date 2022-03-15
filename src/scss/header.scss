@@ -7,9 +7,21 @@ h1 {
   padding-top: 50px;
   display: flex;
   justify-content: center;
+  white-space: nowrap;
+}
+
+.header-text {
+  font-size: '20px';
+}
+
+@media screen and (max-width: 600px) {
+  .header-text {
+    font-size: '5px';
+  }
 }
 
 .calendar-img {
-  width: 75px;
-  height: 75px;
+  padding-top: 7px;
+  width: 65px;
+  height: 60px;
 }

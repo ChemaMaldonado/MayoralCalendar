@@ -2,8 +2,44 @@
   margin-top: 50px;
   height: 600px;
   width: 75vw;
-  border-color: red;
+  background-color: aliceblue;
   border: 2px;
   border-radius: 10px;
   border-style: solid;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-content {
+  min-width: 25%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header-content {
+  min-width: 26%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header {
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  position: sticky;  
+  top: 0; 
+  background-color: aliceblue;
+}
+
+@media only screen and (max-width: 600px) {
+  .calendar-content {
+    min-width: 75%; 
+  }
+  .calendar-header-content {
+    min-width: 80%; 
+  }
 }
