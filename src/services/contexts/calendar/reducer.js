@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
-import { storageInLocal, loadFromLocal } from '../../pages/Home/utils';
-const CalendarState = React.createContext();
-const CalendarDispatch = React.createContext();
+import { storageInLocal, loadFromLocal } from "../../../pages/Home/utils";
 
 const CalendarReducer = (state, action) => {
   switch (action.type) {
@@ -57,41 +54,4 @@ const CalendarReducer = (state, action) => {
   }
 };
 
-const CalendarProvider = ({ children }) => {
-  const [state, dispatch] = React.useReducer(CalendarReducer, {
-    month: 'January',
-    holidays: [],
-    vacances: [],
-  });
-
-  useEffect(() => {
-    dispatch({ type: 'loadDefault' })
-  }, []);
-
-  return (
-    <CalendarState.Provider value={state}>
-      <CalendarDispatch.Provider value={dispatch}>
-        {children}
-      </CalendarDispatch.Provider>
-    </CalendarState.Provider>
-  );
-};
-
-const useCalendarState = () => {
-  const context = React.useContext(CalendarState);
-  if (context === undefined) {
-    throw new Error('Calendar context must be used within a provider');
-  }
-  return context;
-};
-
-const useCalendarDispatch = () => {
-  const context = React.useContext(CalendarDispatch);
-  if (context === undefined) {
-    throw new Error('Calendar dispatch must be used within a provider');
-  }
-  return context;
-};
-
-export { CalendarProvider, useCalendarState, useCalendarDispatch };
-
+export { CalendarReducer };

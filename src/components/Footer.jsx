@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCalendarDispatch } from '../services/contexts/Calendar';
+import { useCalendarDispatch } from '../services/contexts/calendar/Calendar';
 
 const Footer = () => {
   const dispatchCalendar = useCalendarDispatch();

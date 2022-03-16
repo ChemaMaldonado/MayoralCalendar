@@ -1,7 +1,7 @@
 import React  from 'react'
 import '../scss/header.scss'
 import CalendarImg from '../assets/images/calendar-icon.png';
-import { useCalendarDispatch } from '../services/contexts/Calendar';
+import { useCalendarDispatch } from '../services/contexts/calendar/Calendar';
 import { HEADER_TEXT, months } from '../utils/constants';
 
 const Header = () => {

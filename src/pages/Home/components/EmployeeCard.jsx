@@ -1,6 +1,6 @@
 import React from 'react'
 import EmployeeIcon from '../../../assets/images/user-icon.png'
-import { useCalendarState } from '../../../services/contexts/Calendar';
+import { useCalendarState } from '../../../services/contexts/calendar/Calendar';
 import { HOLIDAYS_NUMBER } from '../../../utils/constants';
 
 const EmployeeCard = (props) => {

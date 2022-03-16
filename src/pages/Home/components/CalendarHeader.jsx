@@ -1,7 +1,7 @@
 import React from 'react'
 import { CALENDAR_HEADER_TEXT } from '../../../utils/constants'
 import calendarDays from '../../../assets/data/calendar.json';
-import { useCalendarState } from '../../../services/contexts/Calendar';
+import { useCalendarState } from '../../../services/contexts/calendar/Calendar';
 import { getNumberOfMonth } from '../utils';
 
 const CalendarHeader = () => {

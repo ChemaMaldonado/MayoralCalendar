@@ -1,6 +1,6 @@
 import React from 'react'
 import calendarDays from '../../../assets/data/calendar.json'
-import { useCalendarDispatch, useCalendarState } from '../../../services/contexts/Calendar'
+import { useCalendarDispatch, useCalendarState } from '../../../services/contexts/calendar/Calendar'
 import { HOLIDAYS_COLOR, HOLIDAYS_NUMBER, NOT_SELECTED_COLOR, SELECTED_COLOR, WEEKEND_COLOR } from '../../../utils/constants'
 import { getNumberOfMonth } from '../utils'
 
